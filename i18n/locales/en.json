@@ -1,0 +1,56 @@
+{
+  "about": {
+    "description": "This is a communications platform that enables you to build connections through text and video features",
+    "linkLabel": "Get started",
+    "selection": {
+      "title": "Features",
+      "description": "FuelCommunication provides the possibility of text and video communication",
+      "features": {
+        "1": "The highly loaded parts of the application are written in Rust-lang",
+        "2": "The entire source code of the application is publicly available",
+        "3": "Join interest groups and communicate"
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Login to FuelCommunication",
+      "description": "Enter your credentials to access your account",
+      "emailLabel": "Email",
+      "passwordLabel": "Password",
+      "backButtonLabel": "Don't have an account? Sign up!"
+    },
+    "register": {
+      "title": "Register on FuelCommunication",
+      "description": "Enter your credentials to create account",
+      "emailLabel": "Email",
+      "usernameLabel": "Username",
+      "passwordLabel": "Password",
+      "backButtonLabel": "Already have an account? Sign in"
+    }
+  },
+  "settings": {
+    "modal": "Settings",
+    "color_mode": "Color mode",
+    "lang": "Lang",
+    "logout": "Logout from account"
+  },
+  "channel": {
+    "create": {
+      "modal": "Create new channel",
+      "title": "Enter channel title",
+      "description": "Channel description...",
+      "image": "Drop your image here",
+      "btn": "Submit"
+    },
+    "chat": {
+      "input": "Input message..."
+    }
+  },
+  "validate": {
+    "invalidEmail": "Invalid email address",
+    "emptyString": "Expected string, received undefined",
+    "insufficientLength": "Too small: expected string to have >={min} characters",
+    "invalidString": "Invalid string"
+  }
+}
