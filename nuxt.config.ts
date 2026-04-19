@@ -61,6 +61,7 @@ export default defineNuxtConfig({
         format: ["webp", "avif"],
         densities: [1, 2],
         quality: 80,
+        domains: ["127.0.0.1", "localhost"],
         screens: {
             xs: 320,
             sm: 640,
