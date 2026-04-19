@@ -59,7 +59,19 @@
     "modal": "Settings",
     "colorMode": "Color mode",
     "lang": "Lang",
-    "logout": "Logout from account"
+    "logout": "Logout from account",
+    "profile": {
+      "edit": "Edit profile",
+      "username": "Username",
+      "email": "Email",
+      "bio": "Bio",
+      "avatar": "Avatar",
+      "avatarHint": "Drop a new avatar here",
+      "save": "Save",
+      "cancel": "Cancel",
+      "success": "Profile updated",
+      "error": "Failed to update profile"
+    }
   },
   "channel": {
     "create": {
@@ -79,13 +91,48 @@
       "tooLong": "Message is too long (max {max} characters)",
       "typingOne": "{name} is typing...",
       "typingTwo": "{a} and {b} are typing...",
-      "typingMany": "{count} people are typing..."
+      "typingMany": "{count} people are typing...",
+      "image": {
+        "attach": "Attach image",
+        "alt": "Image",
+        "invalidType": "Only image files are allowed",
+        "tooBig": "Image is too large (max 5 MB)",
+        "uploadError": "Failed to upload image"
+      }
     },
     "list": {
       "seoTitle": "Channels",
+      "subtitle": "Discover channels and join the conversation",
       "empty": "No channels found",
-      "noDescription": "No description available"
+      "noDescription": "No description available",
+      "searchPlaceholder": "Search channels by title or description...",
+      "clear": "Clear",
+      "noMatch": "No channels match \"{q}\""
     }
+  },
+  "calls": {
+    "list": {
+      "seoTitle": "Video calls",
+      "title": "Video calls",
+      "createBtn": "New call",
+      "createError": "Failed to create call",
+      "empty": "No active calls",
+      "join": "Join",
+      "full": "Full",
+      "peerCount": "{current} of {max} participants",
+      "refresh": "Refresh"
+    },
+    "room": {
+      "connecting": "Connecting to call...",
+      "peerLabel": "{count} in call",
+      "youLabel": "You ({id})",
+      "copyLink": "Copy link",
+      "linkCopied": "Invite link copied",
+      "linkCopyError": "Failed to copy link"
+    },
+    "toggleMic": "Toggle microphone",
+    "toggleCam": "Toggle camera",
+    "leave": "Leave call"
   },
   "error": {
     "default": "Something went wrong",
