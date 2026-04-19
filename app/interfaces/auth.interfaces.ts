@@ -1,10 +1,13 @@
 import type {FormSubmitEvent} from "@nuxt/ui";
+import type {ZodSchema} from "zod";
 
-export interface AuthFormProps<T, F> {
-    schema: any;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export interface AuthFormProps<T = any, F = any> {
+    schema: ZodSchema<T>;
     title: string;
     description: string;
     fields: F[];
+    loading?: boolean;
     submitHandler: (payload: FormSubmitEvent<T>) => Promise<void>;
     backRoute: string;
     backLabel: string;
@@ -23,6 +26,7 @@ export interface Session {
 	tokenType: string;
 	refreshToken?: string;
 	expiresIn: number;
+	expires_at: number;
 }
 
 export interface LoginResponse {

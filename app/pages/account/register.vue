@@ -1,13 +1,15 @@
 <script setup lang="ts">
+const { t } = useI18n();
 useSeoMeta({
-  title: 'Register',
-  description: 'Register in account',
+    title: () => t("auth.register.seoTitle"),
+    description: () => t("auth.register.seoDescription"),
 });
 definePageMeta({
-	layout: "auth",
+    layout: "auth",
+    middleware: "guest",
 });
 </script>
 
 <template>
-  <AuthRegister/>
+    <AuthRegister />
 </template>
