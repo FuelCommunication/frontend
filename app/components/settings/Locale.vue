@@ -1,19 +1,21 @@
 <script setup lang="ts">
-import { en, ru } from "@nuxt/ui/locale";
+import type { LocaleObject } from "@nuxtjs/i18n";
 
-const { locale, setLocale } = useI18n()
+const { locale, setLocale, locales } = useI18n();
 
-const changeLocale = async (value: "en" | "ru") => {
-  await setLocale(value);
-  window.location.reload();
-};
+const items = computed(() =>
+    (locales.value as LocaleObject[]).map((l) => ({
+        label: l.name ?? l.code,
+        value: l.code,
+    })),
+);
 </script>
 
 <template>
-  <ULocaleSelect
-      :model-value="locale"
-      :locales="[en, ru]"
-      class="w-48 cursor-pointer"
-      @update:model-value="changeLocale"
-  />
+    <USelect
+        :model-value="locale"
+        :items="items"
+        class="w-48 cursor-pointer"
+        @update:model-value="(value: string) => setLocale(value as 'en' | 'ru')"
+    />
 </template>
