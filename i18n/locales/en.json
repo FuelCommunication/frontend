@@ -1,19 +1,38 @@
 {
   "about": {
+    "seo": {
+      "title": "About"
+    },
     "description": "This is a communications platform that enables you to build connections through text and video features",
     "linkLabel": "Get started",
     "selection": {
       "title": "Features",
       "description": "FuelCommunication provides the possibility of text and video communication",
       "features": {
-        "1": "The highly loaded parts of the application are written in Rust-lang",
-        "2": "The entire source code of the application is publicly available",
-        "3": "Join interest groups and communicate"
+        "1": {
+          "title": "Blazing fast and memory safe",
+          "description": "The highly loaded parts of the application are written in Rust-lang"
+        },
+        "2": {
+          "title": "Open source",
+          "description": "The entire source code of the application is publicly available"
+        },
+        "3": {
+          "title": "Groups",
+          "description": "Join interest groups and communicate"
+        }
       }
+    },
+    "cta": {
+      "title": "Ready to get started?",
+      "description": "Join FuelCommunication today and connect with others",
+      "button": "Create an account"
     }
   },
   "auth": {
     "login": {
+      "seoTitle": "Login",
+      "seoDescription": "Login to your account",
       "title": "Login to FuelCommunication",
       "description": "Enter your credentials to access your account",
       "emailLabel": "Email",
@@ -21,17 +40,24 @@
       "backButtonLabel": "Don't have an account? Sign up!"
     },
     "register": {
+      "seoTitle": "Register",
+      "seoDescription": "Create a new account",
       "title": "Register on FuelCommunication",
       "description": "Enter your credentials to create account",
       "emailLabel": "Email",
       "usernameLabel": "Username",
       "passwordLabel": "Password",
       "backButtonLabel": "Already have an account? Sign in"
+    },
+    "toast": {
+      "loginSuccess": "Successfully logged in",
+      "registerSuccess": "Account created",
+      "error": "Something went wrong"
     }
   },
   "settings": {
     "modal": "Settings",
-    "color_mode": "Color mode",
+    "colorMode": "Color mode",
     "lang": "Lang",
     "logout": "Logout from account"
   },
@@ -41,16 +67,40 @@
       "title": "Enter channel title",
       "description": "Channel description...",
       "image": "Drop your image here",
-      "btn": "Submit"
+      "btn": "Submit",
+      "success": "Channel created successfully"
     },
     "chat": {
-      "input": "Input message..."
+      "input": "Input message...",
+      "empty": "No messages yet. Start the conversation!",
+      "error": "Failed to connect to chat",
+      "channelDeleted": "This channel has been deleted",
+      "kicked": "You have been removed from this channel",
+      "tooLong": "Message is too long (max {max} characters)",
+      "typingOne": "{name} is typing...",
+      "typingTwo": "{a} and {b} are typing...",
+      "typingMany": "{count} people are typing..."
+    },
+    "list": {
+      "seoTitle": "Channels",
+      "empty": "No channels found",
+      "noDescription": "No description available"
     }
+  },
+  "error": {
+    "default": "Something went wrong",
+    "400": "The request contains invalid data",
+    "403": "You don't have permission to access this page",
+    "404": "Page not found",
+    "409": "A conflict occurred with the current state",
+    "500": "Internal server error",
+    "back": "Go back"
   },
   "validate": {
     "invalidEmail": "Invalid email address",
-    "emptyString": "Expected string, received undefined",
-    "insufficientLength": "Too small: expected string to have >={min} characters",
-    "invalidString": "Invalid string"
+    "emptyString": "This field is required",
+    "insufficientLength": "Must be at least {min} characters",
+    "invalidString": "Invalid value",
+    "invalidUsername": "Username can only contain letters, digits and single hyphens"
   }
 }
