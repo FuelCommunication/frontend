@@ -6,7 +6,6 @@ useSeoMeta({
 });
 definePageMeta({
     layout: "auth",
-    middleware: "guest",
 });
 </script>
 
