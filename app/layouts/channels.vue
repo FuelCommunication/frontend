@@ -1,4 +1,3 @@
-z
 <script setup lang="ts">
 import { LazyChannelCreateForm, LazySettingsModal } from "#components";
 
@@ -21,6 +20,13 @@ const modalSettings = overlay.create(LazySettingsModal);
             <UButton
                 class="rounded-xl cursor-pointer"
                 size="xl"
+                icon="i-lucide-compass"
+                variant="ghost"
+                :to="localePath('/channel')"
+            />
+            <UButton
+                class="rounded-xl cursor-pointer"
+                size="xl"
                 icon="i-lucide-video"
                 variant="ghost"
                 :to="localePath('/calls')"
@@ -33,8 +39,8 @@ const modalSettings = overlay.create(LazySettingsModal);
                 @click="modalSettings.open()"
             />
         </ChannelSidebar>
-        <main class="flex-1 lg:pl-20 overflow-y-auto">
-            <UContainer>
+        <main class="flex-1 lg:pl-20 overflow-y-auto flex">
+            <UContainer class="flex-1 flex flex-col min-h-full">
                 <slot />
             </UContainer>
         </main>
