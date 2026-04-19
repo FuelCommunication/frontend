@@ -6,7 +6,9 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="mx-auto">
-    <UPageHero title="FuelCommunication"/>
-  </div>
+  <UPageHero
+    title="FuelCommunication"
+    orientation="vertical"
+    class="text-center"
+  />
 </template>
