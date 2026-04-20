@@ -19,19 +19,28 @@ async function handleLogout() {
     >
         <template #body>
             <div class="flex flex-col gap-8">
-                <div v-if="authStore.user" class="pb-4 border-b border-[var(--ui-border)]">
+                <div
+                    v-if="authStore.user"
+                    class="pb-4 border-b border-[var(--ui-border)]"
+                >
                     <div class="flex items-center gap-3">
                         <UAvatar
                             :src="useImageUrl(authStore.user.avatar_url)"
                             :alt="authStore.user.username"
-                            :text="authStore.user.username.charAt(0).toUpperCase()"
+                            :text="
+                                authStore.user.username.charAt(0).toUpperCase()
+                            "
                             size="lg"
                         />
                         <div class="min-w-0 flex-1">
-                            <p class="font-medium text-[var(--ui-text-highlighted)] truncate">
+                            <p
+                                class="font-medium text-[var(--ui-text-highlighted)] truncate"
+                            >
                                 {{ authStore.user.username }}
                             </p>
-                            <p class="text-sm text-[var(--ui-text-muted)] truncate">
+                            <p
+                                class="text-sm text-[var(--ui-text-muted)] truncate"
+                            >
                                 {{ authStore.user.email }}
                             </p>
                         </div>
