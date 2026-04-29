@@ -1,13 +1,15 @@
 <script setup lang="ts">
+const { t } = useI18n();
 useSeoMeta({
-  title: 'Login',
-  description: 'Login in account',
+    title: () => t("auth.login.seoTitle"),
+    description: () => t("auth.login.seoDescription"),
 });
 definePageMeta({
-	layout: "auth",
+    layout: "auth",
+    middleware: "guest",
 });
 </script>
 
 <template>
-  <AuthLogin/>
+    <AuthLogin />
 </template>

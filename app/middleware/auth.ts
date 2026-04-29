@@ -1,8 +1,15 @@
-import type {Session} from "~/interfaces/auth.interfaces";
-
 export default defineNuxtRouteMiddleware(() => {
-	const session = useCookie<{session: Session | undefined}>("auth")
-	if (!session.value) {
-	    return navigateTo("/account/login")
-	}
+    const authStore = useAuthStore();
+    const localePath = useLocalePath();
+
+    if (!authStore.session) {
+        return navigateTo(localePath("/account/login"));
+    }
+
+    const isExpired = authStore.session.expires_at <= Date.now();
+    if (isExpired && !authStore.session.refreshToken) {
+        authStore.session = undefined;
+        authStore.user = undefined;
+        return navigateTo(localePath("/account/login"));
+    }
 });
