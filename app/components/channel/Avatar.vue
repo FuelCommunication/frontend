@@ -6,7 +6,6 @@ defineProps<{ title: string; icon?: string; }>();
   <UTooltip :text="title">
     <UAvatar :src="icon" size="3xl" class="rounded-none squircle" :alt="title"/>
   </UTooltip>
-    <span v-if="false" class="absolute -right-1 -top-1 w-3 h-3 bg-yellow-500 rounded-full border-2 border-gray-800"/>
 </template>
 
 <style scoped>

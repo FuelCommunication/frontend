@@ -2,12 +2,21 @@ export interface Channel {
 	id: string;
 	title: string;
 	description: string;
-	avatar_url?: string;
-	// unread: boolean;
+	avatar_url?: string | null;
 }
 
-export interface Channels {
-	items: Channel[];
+export interface Subscription {
+	id: string;
+	title: string;
+	description: string;
+	avatar_url: string | null;
+	subscribers_count: number;
+}
+
+
+
+export interface PaginatedResponse<T> {
+	items: T[];
 	limit: number;
 	offset: number;
 	total: number;
